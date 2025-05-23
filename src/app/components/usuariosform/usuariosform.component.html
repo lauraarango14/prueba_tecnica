@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h2>{{id ? 'Editar usuario' : 'Agregar Usuario'}} </h2>
+
+  <form [formGroup]="userForm">
+    <div class="mb-3">
+      <label>nombre</label>
+      <input type="text" class="form-control" formControlName="name"/>
+    </div>
+
+    <div class="mb-3">
+      <label>Correo</label>
+      <input type="text" class="form-control" formControlName="email"/>
+    </div>
+
+    <div class="mb-3">
+      <label>Direccion</label>
+      <input type="text" class="form-control" formControlName="address"/>
+    </div>
+
+    <div class="mb-3">
+      <label>Telefono</label>
+      <input type="number"class="form-control" formControlName="phone"/>
+    </div>
+  </form>
+  <button type="button" class="btn btn-success" (click)="onSubmit()">Guardar</button>
+  <button type="button" class="btn btn-secondary ms-2" (click)="redirect()">Cancelar</button>
+</div>
